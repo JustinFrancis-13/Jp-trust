@@ -1,0 +1,160 @@
+.aboutus-page {
+  font-family: "Poppins", sans-serif;
+  color: #0c0000; /* dark gray text */
+  padding-top: 0px;
+  background-color: #141414; /* light gray background */
+}
+
+/* Section 1 - Intro */
+.aboutus-intro {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0c0c0cf8; /* soft gray */
+  border-bottom: 1px solid #0a0a0a;
+}
+
+.aboutus-intro h1 {
+  font-size: 2.5rem;
+  color: #faf6f6; /* dark gray */
+  margin-bottom: 20px;
+}
+
+.aboutus-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fcfcfc; /* medium gray */
+}
+
+/* Section 2 - History */
+.aboutus-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+  background: #0c0c0c; /* white background */
+  border-top: 1px solid #0e0d0d;
+  border-bottom: 1px solid #0e0d0d;
+}
+
+.aboutus-history-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.aboutus-history-text {
+  flex: 1;
+}
+
+.aboutus-history-text h2 {
+  color: #fcfafa;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.aboutus-history-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f3f2f2;
+}
+
+/* Section 3 - Founder */
+.aboutus-founder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+  background: #040125; /* light gray */
+}
+
+.aboutus-founder-img img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(255, 252, 252, 0.438);
+}
+
+.aboutus-founder-text {
+  flex: 1;
+}
+
+.aboutus-founder-text h2 {
+  color: #fffdfd;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.aboutus-founder-text h3 {
+  font-size: 1.4rem;
+  color: #f0efef;
+  margin-bottom: 15px;
+}
+
+.aboutus-founder-text p {
+  font-size: 1.05rem;
+  color: #f1efef;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* Section 4 - Co-Founder */
+.aboutus-cofounder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+  background: #040125; /* white background */
+  border-top: 1px solid #040125;
+}
+
+.aboutus-cofounder-img img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(247, 245, 245, 0.08);
+}
+
+.aboutus-cofounder-text {
+  flex: 1;
+}
+
+.aboutus-cofounder-text h2 {
+  color: #f7f5f5;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.aboutus-cofounder-text h3 {
+  font-size: 1.4rem;
+  color: #fcf9f9;
+  margin-bottom: 15px;
+}
+
+.aboutus-cofounder-text p {
+  font-size: 1.05rem;
+  color: #f8f6f6;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aboutus-history,
+  .aboutus-founder,
+  .aboutus-cofounder {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutus-history-img img,
+  .aboutus-founder-img img,
+  .aboutus-cofounder-img img {
+    max-width: 320px;
+  }
+}

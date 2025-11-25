@@ -1,0 +1,60 @@
+/* Donate Page - Grey & White Theme */
+
+.donate-page {
+  text-align: center;
+  padding: 0px 10%;
+  background-color: #f5f5f5; /* light grey background */
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.donate-title {
+  font-size: 2.5rem;
+  color: #333333; /* dark grey title */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+.donate-text {
+  font-size: 1.15rem;
+  color: #555555; /* medium grey text */
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+/* Image Section */
+.donate-image-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); /* subtle grey shadow */
+  background-color: #ffffff; /* white card */
+}
+
+.donate-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: none; /* no pop or animation */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donate-title {
+    font-size: 2rem;
+  }
+
+  .donate-text {
+    font-size: 1rem;
+  }
+
+  .donate-image-container {
+    width: 100%;
+  }
+}

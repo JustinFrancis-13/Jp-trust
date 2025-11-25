@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  background-color: #353434;
+  color: #f3f0f0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+a { text-decoration: none; color: inherit; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+img { max-width: 100%; display: block; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 65px;
+  background:#161616(54, 54, 54, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  z-index: 1000;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo { display: flex; align-items: center; }
+.site-logo { height: 55px; width: auto; transition: transform 0.3s ease; }
+.site-logo:hover { transform: scale(1.05); }
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #c4b9b9;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active { background-color: #e1e1e1; color: #000; }
+
+.donate-btn {
+  background-color: #d9d9d9;
+  color: #111;
+  border: 1px solid #bfbfbf;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.heart-icon { color: #d62a2a; }
+
+/* Active on /donate page */
+.donate-btn.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.donate-btn.active .heart-icon { color: #d62a2a; }
+
+/* Hover effect: pop + black bg + white text */
+.donate-btn:hover {
+  transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+}
+
+.donate-btn:hover .heart-icon {
+  color: #d62a2a;
+}
+
+/* =============================
+   MAIN CONTENT
+============================= */
+.main-content { margin-top: 65px; min-height: calc(100vh - 120px); background-color: #f2f2f2; }
+
+/* =============================
+   FOOTER
+============================= */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
+}
+
+.footer-left { font-size: 14px; letter-spacing: 0.3px; }
+.footer-right { display: flex; align-items: center; gap: 15px; }
+.footer-right a {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-right a:hover { transform: scale(1.2); color: #ccc; }
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 992px) {
+  .nav-links { gap: 20px; }
+  .site-logo { height: 45px; }
+  .nav-links a { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { flex-direction: column; gap: 8px; }
+  .nav-links { position: static; transform: none; justify-content: center; }
+  .donate-btn { width: 100%; justify-content: center; margin-top: 5px; }
+  .main-content { margin-top: 100px; }
+  .footer { flex-direction: column; text-align: center; gap: 10px; }
 }
