@@ -1,27 +1,48 @@
+/* ===========================================
+   GLOBAL RESET + BASE STYLES
+=========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html, body {
+html,body {
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #353434;
   color: #f3f0f0;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
+  background: #000;
+  min-height: 100vh;
 }
 
-a { text-decoration: none; color: inherit; }
+/* ===========================================
+   LINKS + IMAGES
+=========================================== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
 
-img { max-width: 100%; display: block; }
-
-
+/* ===========================================
+   HEADER
+=========================================== */
 .header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 65px;
-  background:#161616(54, 54, 54, 0.95);
+  background: rgba(22, 22, 22, 0.95);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -36,9 +57,18 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-.logo { display: flex; align-items: center; }
-.site-logo { height: 55px; width: auto; transition: transform 0.3s ease; }
-.site-logo:hover { transform: scale(1.05); }
+.logo {
+  display: flex;
+  align-items: center;
+}
+.site-logo {
+  height: 55px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.site-logo:hover {
+  transform: scale(1.05);
+}
 
 .nav-links {
   position: absolute;
@@ -56,10 +86,13 @@ img { max-width: 100%; display: block; }
   border-radius: 6px;
   transition: all 0.2s ease;
 }
-
 .nav-links a:hover,
-.nav-links a.active { background-color: #e1e1e1; color: #000; }
+.nav-links a.active {
+  background-color: #e1e1e1;
+  color: #000;
+}
 
+/* Donate Button */
 .donate-btn {
   background-color: #d9d9d9;
   color: #111;
@@ -75,68 +108,162 @@ img { max-width: 100%; display: block; }
   transition: all 0.2s ease;
   white-space: nowrap;
 }
+.heart-icon {
+  color: #d62a2a;
+}
 
-.heart-icon { color: #d62a2a; }
-
-/* Active on /donate page */
 .donate-btn.active {
   background-color: #000;
   color: #fff;
 }
+.donate-btn.active .heart-icon {
+  color: #d62a2a;
+}
 
-.donate-btn.active .heart-icon { color: #d62a2a; }
-
-/* Hover effect: pop + black bg + white text */
 .donate-btn:hover {
   transform: scale(1.1);
   background-color: #000;
   color: #fff;
 }
-
 .donate-btn:hover .heart-icon {
   color: #d62a2a;
 }
 
-/* =============================
-   MAIN CONTENT
-============================= */
-.main-content { margin-top: 65px; min-height: calc(100vh - 120px); background-color: #f2f2f2; }
+/* ===========================================
+   MAIN CONTENT + FOOTER
+=========================================== */
+.main-content {
+  margin-top: 65px;
+  min-height: calc(100vh - 120px);
+  background-color: transparent; /* no bg to show bubbles */
+  position: relative;
+  z-index: 10; /* above bubbles */
+  color: #f3f0f0;
+  padding: 0 !important;
 
-/* =============================
-   FOOTER
-============================= */
+}
+
 .footer {
-  background: #000;
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1000;
 }
-
-.footer-left { font-size: 14px; letter-spacing: 0.3px; }
-.footer-right { display: flex; align-items: center; gap: 15px; }
+.footer-left {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 .footer-right a {
   color: #fff;
   font-size: 20px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-.footer-right a:hover { transform: scale(1.2); color: #ccc; }
-
-/* =============================
-   RESPONSIVE
-============================= */
-@media (max-width: 992px) {
-  .nav-links { gap: 20px; }
-  .site-logo { height: 45px; }
-  .nav-links a { font-size: 14px; }
+.footer-right a:hover {
+  transform: scale(1.2);
+  color: #ccc;
 }
 
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 20px;
+  }
+  .site-logo {
+    height: 45px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+}
 @media (max-width: 768px) {
-  .header-inner { flex-direction: column; gap: 8px; }
-  .nav-links { position: static; transform: none; justify-content: center; }
-  .donate-btn { width: 100%; justify-content: center; margin-top: 5px; }
-  .main-content { margin-top: 100px; }
-  .footer { flex-direction: column; text-align: center; gap: 10px; }
+  .header-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-links {
+    position: static;
+    transform: none;
+    justify-content: center;
+  }
+  .donate-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .main-content {
+    margin-top: 100px;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* ===========================================
+   RAINBOW SOAP BUBBLES ANIMATION
+=========================================== */
+.bubbles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0; /* behind everything */
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -200px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, 
+    #a3d5ff 0%, 
+    #c1e1ff 40%, 
+    #d9f0ff 70%, 
+    #f0fbff 100%);
+  box-shadow:
+    0 0 8px rgba(163, 213, 255, 0.6),
+    0 0 15px rgba(193, 225, 255, 0.4),
+    0 0 20px rgba(217, 240, 255, 0.3);
+  opacity: 0.1;
+  filter: blur(2.5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: bubbleFloatSpin 14s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes bubbleFloatSpin {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateX(40px) translateY(-30vh) scale(1.05) rotate(60deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(-50px) translateY(-60vh) scale(0.95) rotate(120deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateX(45px) translateY(-90vh) scale(0.9) rotate(180deg);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateX(30px) translateY(-120vh) scale(0.85) rotate(240deg);
+    opacity: 0;
+  }
 }

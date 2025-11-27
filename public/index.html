@@ -39,5 +39,44 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+<div class="bubbles">
+  <span style="--i:1;"></span>
+  <span style="--i:2;"></span>
+  <span style="--i:3;"></span>
+  <span style="--i:4;"></span>
+  <span style="--i:5;"></span>
+  <span style="--i:6;"></span>
+  <span style="--i:7;"></span>
+  <span style="--i:8;"></span>
+  <span style="--i:9;"></span>
+  <span style="--i:10;"></span>
+  <span style="--i:11;"></span>
+  <span style="--i:12;"></span>
+  <span style="--i:13;"></span>
+  <span style="--i:14;"></span>
+  <span style="--i:15;"></span>
+  <span style="--i:16;"></span>
+  <span style="--i:17;"></span>
+  <span style="--i:18;"></span>
+  <span style="--i:19;"></span>
+  <span style="--i:20;"></span>
+</div>
+<div class="bubbles"></div>
+
+<script>
+  const bubbleContainer = document.querySelector('.bubbles');
+  for (let i = 0; i < 30; i++) {
+    const bubble = document.createElement('span');
+    const size = Math.random() * 80 + 40; // random size (40–120px)
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${Math.random() * 100}%`;
+    bubble.style.animationDuration = `${8 + Math.random() * 8}s`;
+    bubble.style.animationDelay = `${Math.random() * 5}s`;
+    bubbleContainer.appendChild(bubble);
+  }
+</script>
+
+
   </body>
 </html>

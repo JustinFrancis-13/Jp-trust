@@ -1,31 +1,75 @@
-/* Donate Page - Grey & White Theme */
+/* Donate Button Styles */
+.donate-btn {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff4b4b, #ff7e7e);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: linear-gradient(135deg, #ff2d2d, #ff7373);
+}
+
+.donate-heart {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: transform 0.3s ease;
+}
+
+.donate-btn:active .donate-heart {
+  animation: popHeart 0.4s ease;
+}
+
+@keyframes popHeart {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.6); }
+  70% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+
 
 .donate-page {
   text-align: center;
-  padding: 0px 10%;
-  background-color: #f5f5f5; /* light grey background */
+  padding: 0 10%;
+  backdrop-filter: blur(10px);
+  background-color: #f5f5f556; 
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
-
-/* Title */
 .donate-title {
   font-size: 2.5rem;
-  color: #333333; /* dark grey title */
-  margin-bottom: 20px;
+  background-color: #ffffffd9;
+  padding: 20px;
+  max-width: fit-content; /* keep width as content */
+  border-radius: 50px;
+  color: #ff4b4b;
+  margin: 40px auto 20px auto; /* center with auto margins */
   letter-spacing: 0.5px;
+  text-align: center; /* just in case */
+  display: block; /* ensures margin auto works */
 }
 
-/* Description */
+
 .donate-text {
   font-size: 1.15rem;
-  color: #555555; /* medium grey text */
+  color: #fffffff3; /* medium grey text */
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto 50px;
 }
 
-/* Image Section */
+/* Image Container */
 .donate-image-container {
   width: 100%;
   max-width: 900px;
@@ -41,7 +85,7 @@
   height: auto;
   object-fit: cover;
   display: block;
-  transition: none; /* no pop or animation */
+  transition: none; /* no animation */
 }
 
 /* Responsive */

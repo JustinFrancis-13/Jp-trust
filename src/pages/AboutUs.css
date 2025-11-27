@@ -1,15 +1,20 @@
 .aboutus-page {
   font-family: "Poppins", sans-serif;
-  color: #0c0000; /* dark gray text */
+  color: #0c0000; 
   padding-top: 0px;
-  background-color: #141414; /* light gray background */
+  background-color:transparent;
+  background: rgba(12, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 0;
+  padding: 0 !important;
+  width: 100%;
+
 }
 
-/* Section 1 - Intro */
 .aboutus-intro {
   text-align: center;
   padding: 80px 20px;
-  background: #0c0c0cf8; /* soft gray */
   border-bottom: 1px solid #0a0a0a;
 }
 
@@ -34,7 +39,6 @@
   justify-content: center;
   padding: 60px 10%;
   gap: 40px;
-  background: #0c0c0c; /* white background */
   border-top: 1px solid #0e0d0d;
   border-bottom: 1px solid #0e0d0d;
 }
@@ -69,7 +73,6 @@
   justify-content: center;
   padding: 60px 10%;
   gap: 40px;
-  background: #040125; /* light gray */
 }
 
 .aboutus-founder-img img {
@@ -109,7 +112,7 @@
   justify-content: center;
   padding: 60px 10%;
   gap: 40px;
-  background: #040125; /* white background */
+
   border-top: 1px solid #040125;
 }
 

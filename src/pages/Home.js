@@ -3,6 +3,7 @@ import "./Home.css";
 import banner from "../assets/banner.jpg";
 import missionImage from "../assets/mission.jpg";
 import visionImage from "../assets/vision.jpg";
+import { Link } from "react-router-dom"; // ✅ import at top
 
 function Home() {
   // Fade-in scroll animation
@@ -23,16 +24,23 @@ function Home() {
 
   return (
     <div className="home-page">
-      {/* Banner */}
-      <section id="home" className="banner-section">
-        <img src={banner} alt="Joseph Paul Trust Banner" className="banner-image" />
-        <div className="banner-text">
+      
+      <section id="home" className="hero-section">
+        <div className="hero-content">
           <h1>Welcome to Joseph Paul Trust</h1>
           <p>Serving humanity with faith, love & compassion</p>
+
+          {/* Donate button linking to Donate page */}
+          <Link to="/donate" className="donate-btn">
+            ❤️ Donate Now
+          </Link>
+        </div>
+
+        <div className="hero-image">
+          <img src={banner} alt="Emergency Birth Kit" />
         </div>
       </section>
 
-      {/* Introduction */}
       <section id="intro" className="intro-section fade-in">
         <div className="intro-container">
           <h2>Our Introduction</h2>
@@ -51,7 +59,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section id="mission-vision" className="mission-vision-section fade-in">
         <div className="mission">
           <img src={missionImage} alt="Mission" className="mv-image" />

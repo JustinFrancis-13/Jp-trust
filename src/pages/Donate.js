@@ -1,6 +1,6 @@
 import React from "react";
 import "./Donate.css";
-import donateImage from "../assets/donate.jpg"; // make sure this image exists
+import donateImage from "../assets/donate.jpg";
 
 function Donate() {
   return (
