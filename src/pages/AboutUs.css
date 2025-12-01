@@ -1,163 +1,479 @@
-.aboutus-page {
-  font-family: "Poppins", sans-serif;
-  color: #0c0000; 
-  padding-top: 0px;
-  background-color:transparent;
-  background: rgba(12, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  margin: 0;
-  padding: 0 !important;
-  width: 100%;
 
+* {
+  font-family: 'Merriweather', serif;
+  box-sizing: border-box;
+}
+
+.aboutus-page {
+  background: #f9f9f9;
+  color: #000;
+  padding: 60px 0;
 }
 
 .aboutus-intro {
   text-align: center;
-  padding: 80px 20px;
-  border-bottom: 1px solid #0a0a0a;
+  padding: 80px 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .aboutus-intro h1 {
-  font-size: 2.5rem;
-  color: #faf6f6; /* dark gray */
+  font-size: 2.8rem;
+  color: #000;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .aboutus-intro p {
-  max-width: 800px;
-  margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #fcfcfc; /* medium gray */
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Section 2 - History */
-.aboutus-history {
+.aboutus-name {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.aboutus-name h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.aboutus-name p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.aboutus-history,
+.aboutus-founder,
+.aboutus-cofounder {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 10%;
-  gap: 40px;
-  border-top: 1px solid #0e0d0d;
-  border-bottom: 1px solid #0e0d0d;
+  gap: 0;
+  padding: 80px 5%;
+  margin: 100px auto;
+  max-width: 1700px;
+}
+
+.aboutus-founder {
+  transform: translateX(-150px);
 }
 
 .aboutus-history-img img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  width: 650px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  transform: translateX(-150px);
 }
 
-.aboutus-history-text {
-  flex: 1;
-}
-
-.aboutus-history-text h2 {
-  color: #fcfafa;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.aboutus-history-text p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #f3f2f2;
-}
-
-/* Section 3 - Founder */
-.aboutus-founder {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 60px 10%;
-  gap: 40px;
-}
-
-.aboutus-founder-img img {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(255, 252, 252, 0.438);
-}
-
-.aboutus-founder-text {
-  flex: 1;
-}
-
-.aboutus-founder-text h2 {
-  color: #fffdfd;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.aboutus-founder-text h3 {
-  font-size: 1.4rem;
-  color: #f0efef;
-  margin-bottom: 15px;
-}
-
-.aboutus-founder-text p {
-  font-size: 1.05rem;
-  color: #f1efef;
-  line-height: 1.8;
-  margin-bottom: 10px;
-}
-
-/* Section 4 - Co-Founder */
-.aboutus-cofounder {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 60px 10%;
-  gap: 40px;
-
-  border-top: 1px solid #040125;
-}
-
+.aboutus-founder-img img,
 .aboutus-cofounder-img img {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(247, 245, 245, 0.08);
+  width: 480px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  transform: translateX(-120px);
+}
+
+.aboutus-history-text,
+.aboutus-founder-text,
+.aboutus-cofounder-text {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  right: 5%;
+  width: 38%;
+  z-index: 2;
 }
 
 .aboutus-cofounder-text {
-  flex: 1;
+  right: 5%;
+  left: auto;
 }
 
+.aboutus-history-text h2,
+.aboutus-founder-text h2,
 .aboutus-cofounder-text h2 {
-  color: #f7f5f5;
-  font-size: 2rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.aboutus-history-text h3,
+.aboutus-founder-text h3,
+.aboutus-cofounder-text h3 {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.aboutus-history-text p,
+.aboutus-founder-text p,
+.aboutus-cofounder-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   TIMELINE SECTION
+================================= */
+.aboutus-timeline {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 1000px;
+  padding: 40px 20px;
+}
+
+.timeline-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.timeline-card {
+  background: #fff;
+  border-radius: 14px;
+  width: 220px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-card h3 {
+  color: #007b5e;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.aboutus-cofounder-text h3 {
-  font-size: 1.4rem;
-  color: #fcf9f9;
+.timeline-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===============================
+   SERVICES SECTION
+================================= */
+.aboutus-services {
+  text-align: center;
+  background: #ffffff;
+  padding: 80px 20px;
+  margin: 100px 0;
+}
+
+.aboutus-services h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-content: center;
+}
+
+.service-item {
+  background: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: scale(1.03);
+}
+
+.service-item img {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
   margin-bottom: 15px;
 }
 
-.aboutus-cofounder-text p {
-  font-size: 1.05rem;
-  color: #f8f6f6;
-  line-height: 1.8;
+.service-item h3 {
+  font-size: 1.2rem;
+  color: #000;
   margin-bottom: 10px;
 }
 
+.service-item p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ===============================
+   VOLUNTEER SECTION
+================================= */
+.aboutus-volunteer {
+  background: linear-gradient(135deg, #fdfdfd, #f3f3f3);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.volunteer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.volunteer-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.volunteer-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.volunteer-content img {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   FUTURE VISION
+================================= */
+.aboutus-future {
+  background: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  margin: 100px 0;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.03);
+}
+
+.aboutus-future h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.aboutus-future p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+.timeline-section {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Vertical Line */
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #007b5e;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* Timeline Items */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #fff;
+  border: 4px solid #007b5e;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Content Box */
+.timeline-content {
+  background: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.timeline-content h3 {
+  color: #007b5e;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.timeline-content h4 {
+  color: #000;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Left side */
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -13px;
+}
+
+/* Animation (slide in) */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline-container::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0;
+  }
+}
+
+/* ===============================
+   SCRIPTURE VERSE
+================================= */
+.aboutus-verse {
+  text-align: center;
+  padding: 80px 20px;
+  background: #282828;
+  color: #fff;
+}
+
+.aboutus-verse blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
 @media (max-width: 900px) {
   .aboutus-history,
   .aboutus-founder,
   .aboutus-cofounder {
     flex-direction: column;
-    text-align: center;
+    padding: 40px 5%;
+    margin: 60px auto;
+    transform: none;
   }
 
   .aboutus-history-img img,
   .aboutus-founder-img img,
   .aboutus-cofounder-img img {
-    max-width: 320px;
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .aboutus-history-text,
+  .aboutus-founder-text,
+  .aboutus-cofounder-text {
+    position: static;
+    width: 100%;
+    margin-top: -40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+  }
+
+  .timeline-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-content img {
+    width: 100%;
   }
 }

@@ -1,10 +1,13 @@
-/* Donate Button Styles */
+*{
+    font-family: 'Merriweather', serif;
+  
+}
 .donate-btn {
   position: relative;
   padding: 10px 20px;
   border-radius: 30px;
-  background: linear-gradient(135deg, #ff4b4b, #ff7e7e);
-  color: #fff;
+  background: linear-gradient(135deg, #fffffffe, #666666);
+  color: #ffffff;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -16,7 +19,8 @@
 }
 
 .donate-btn:hover {
-  background: linear-gradient(135deg, #ff2d2d, #ff7373);
+  background: linear-gradient(135deg, #b9c6b9, #686868);
+  color: #000000;
 }
 
 .donate-heart {
@@ -40,44 +44,45 @@
 
 
 .donate-page {
+  
+  font-family: 'Merriweather', serif;
   text-align: center;
   padding: 0 10%;
   backdrop-filter: blur(10px);
   background-color: #f5f5f556; 
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  
 }
 .donate-title {
   font-size: 2.5rem;
   background-color: #ffffffd9;
   padding: 20px;
-  max-width: fit-content; /* keep width as content */
+  max-width: fit-content; 
   border-radius: 50px;
-  color: #ff4b4b;
-  margin: 40px auto 20px auto; /* center with auto margins */
+  color: #434343;
+  margin: 40px auto 20px auto; 
   letter-spacing: 0.5px;
-  text-align: center; /* just in case */
-  display: block; /* ensures margin auto works */
+  text-align: center; 
+  display: block; 
 }
 
 
 .donate-text {
   font-size: 1.15rem;
-  color: #fffffff3; /* medium grey text */
+  color: #000000f3; 
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto 50px;
 }
 
-/* Image Container */
 .donate-image-container {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); /* subtle grey shadow */
-  background-color: #ffffff; /* white card */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); 
+  background-color: #ffffff; 
 }
 
 .donate-image-container img {
@@ -85,10 +90,9 @@
   height: auto;
   object-fit: cover;
   display: block;
-  transition: none; /* no animation */
+  transition: none; 
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .donate-title {
     font-size: 2rem;

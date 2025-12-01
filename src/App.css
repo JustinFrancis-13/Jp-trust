@@ -1,269 +1,236 @@
-/* ===========================================
-   GLOBAL RESET + BASE STYLES
-=========================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+:root {
+  --dark: #1d1a1a;  
+  --light: #f4f4f4;  
+  --accent-color: #393939; 
 }
 
-html,body {
+body {
+  font-family: 'Merriweather', serif;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: #f3f0f0;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  position: relative;
-  background: #000;
-  min-height: 100vh;
+  background-color: var(--light); 
+  color: var(--dark);  
 }
 
-/* ===========================================
-   LINKS + IMAGES
-=========================================== */
-a {
+.hero-btn {
+  background-color: var(--accent-color);
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  color: white;
   text-decoration: none;
-  color: inherit;
-}
-img {
-  max-width: 100%;
-  display: block;
+  font-weight: 700;
+  transition: 0.3s ease;
 }
 
-/* ===========================================
-   HEADER
-=========================================== */
+.hero-btn:hover {
+  background-color: darken(var(--accent-color), 10%);  
+}
+
+
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 65px;
-  background: rgba(22, 22, 22, 0.95);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   z-index: 1000;
-  display: flex;
-  align-items: center;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, padding 0.3s ease;
 }
 
 .header-inner {
-  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.8rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  position: relative;
+  align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-.site-logo {
+.logo img {
   height: 55px;
-  width: auto;
-  transition: transform 0.3s ease;
-}
-.site-logo:hover {
-  transform: scale(1.05);
+  border-radius: 8px;
+  display: block;
 }
 
 .nav-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-links a {
-  color: #c4b9b9;
-  font-size: 15px;
+  text-decoration: none;
+  color: #333;
   font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  background-color: #e1e1e1;
-  color: #000;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-/* Donate Button */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #252525f0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
 .donate-btn {
-  background-color: #d9d9d9;
-  color: #111;
-  border: 1px solid #bfbfbf;
-  padding: 7px 16px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 500;
+  background: linear-gradient(135deg, #4f584b, #2e342bc6);
+  color: #ffffff; /* pure white */
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: 
+    color 0.3s ease, 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease;
 }
-.heart-icon {
-  color: #d62a2a;
+.nav-links a.donate-btn {
+  color: #ffffff; 
 }
 
-.donate-btn.active {
-  background-color: #000;
-  color: #fff;
-}
-.donate-btn.active .heart-icon {
-  color: #d62a2a;
-}
 
 .donate-btn:hover {
-  transform: scale(1.1);
-  background-color: #000;
-  color: #fff;
+  background: linear-gradient(135deg, #ffffff, #939393);
+  color: #000000 !important; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
+.heart-icon {
+  color: #ffffff; 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
 .donate-btn:hover .heart-icon {
-  color: #d62a2a;
+  color: #ff0000; 
+  transform: translateY(-3px);
 }
 
-/* ===========================================
-   MAIN CONTENT + FOOTER
-=========================================== */
-.main-content {
-  margin-top: 65px;
-  min-height: calc(100vh - 120px);
-  background-color: transparent; /* no bg to show bubbles */
-  position: relative;
-  z-index: 10; /* above bubbles */
-  color: #f3f0f0;
-  padding: 0 !important;
-
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #3f3f3f;
+  display: none;
+  cursor: pointer;
 }
 
-.footer {
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 1000;
-}
-.footer-left {
-  font-size: 14px;
-  letter-spacing: 0.3px;
-}
-.footer-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.footer-right a {
-  color: #fff;
-  font-size: 20px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.footer-right a:hover {
-  transform: scale(1.2);
-  color: #ccc;
-}
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
 
-/* ===========================================
-   RESPONSIVE
-=========================================== */
-@media (max-width: 992px) {
   .nav-links {
-    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    width: 220px;
+    padding: 2rem 1.5rem;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
   }
-  .site-logo {
-    height: 45px;
+
+  .nav-links.open {
+    transform: translateX(0%);
   }
+
   .nav-links a {
-    font-size: 14px;
+    padding: 0.6rem 0;
   }
 }
+
+
+
+.footer-container {
+  background-color: #000000;
+  max-width: 1800px;
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-left: 20px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: block;
+}
+
+.footer-left p {
+  color: #898989;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-right h4 {
+  margin-bottom: 1rem;
+  color: #b2b2b2cc;
+}
+.social-links a {
+  font-size: 1.2rem;
+  color: #787777;
+  margin-right: 1.5rem;
+  display: inline-flex;
+  transition: 
+    color 0.35s ease,
+    transform 0.25s cubic-bezier(.17, .67, .83, .67),
+    text-shadow 0.35s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.22) translateY(-3px);   
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25); 
+}
+
+#insta:hover {
+  color: #E1306C;
+}
+
+#face:hover {
+  color: #FF0000;
+}
+
+#yt:hover {
+  color: #1877F2;
+}
+#wtsp:hover{
+  color: rgb(3, 228, 3);
+}
+
+
 @media (max-width: 768px) {
-  .header-inner {
+  .footer-container {
     flex-direction: column;
-    gap: 8px;
-  }
-  .nav-links {
-    position: static;
-    transform: none;
-    justify-content: center;
-  }
-  .donate-btn {
-    width: 100%;
-    justify-content: center;
-    margin-top: 5px;
-  }
-  .main-content {
-    margin-top: 100px;
-  }
-  .footer {
-    flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 10px;
   }
-}
 
-/* ===========================================
-   RAINBOW SOAP BUBBLES ANIMATION
-=========================================== */
-.bubbles {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0; /* behind everything */
-}
-
-.bubbles span {
-  position: absolute;
-  bottom: -200px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, 
-    #a3d5ff 0%, 
-    #c1e1ff 40%, 
-    #d9f0ff 70%, 
-    #f0fbff 100%);
-  box-shadow:
-    0 0 8px rgba(163, 213, 255, 0.6),
-    0 0 15px rgba(193, 225, 255, 0.4),
-    0 0 20px rgba(217, 240, 255, 0.3);
-  opacity: 0.1;
-  filter: blur(2.5px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  animation: bubbleFloatSpin 14s ease-in-out infinite;
-  mix-blend-mode: screen;
-}
-
-@keyframes bubbleFloatSpin {
-  0% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-    opacity: 0.3;
-  }
-  25% {
-    transform: translateX(40px) translateY(-30vh) scale(1.05) rotate(60deg);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translateX(-50px) translateY(-60vh) scale(0.95) rotate(120deg);
-    opacity: 0.2;
-  }
-  75% {
-    transform: translateX(45px) translateY(-90vh) scale(0.9) rotate(180deg);
-    opacity: 0.15;
-  }
-  100% {
-    transform: translateX(30px) translateY(-120vh) scale(0.85) rotate(240deg);
-    opacity: 0;
+  .social-links {
+    justify-content: center;
+    margin-top: 1rem;
   }
 }

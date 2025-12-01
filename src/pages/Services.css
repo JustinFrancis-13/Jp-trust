@@ -1,31 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
+* {
+  font-family: 'Merriweather', serif;
+}
 
+/* ============================
+   PAGE BASE
+============================ */
 .services-page {
   padding: 10px 0 70px 0;
-  backdrop-filter:blur(10px);
-  font-family: "Poppins", sans-serif;
-  color: #2b2b2b;
+  backdrop-filter: blur(10px);
+  color: #000;
   text-align: center;
 }
 
-
 .services-title {
-  font-size: 2.5rem;
-  color: #fffcfcad; 
+  font-size: 2rem;
+  color: #5a5a5a; /* lighter grey heading */
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
 
 .services-intro {
   font-size: 1.1rem;
-  color: #f7f7f7dc;
-  backdrop-filter:blur(10px); 
+  color: #000; /* pure black text */
+  backdrop-filter: blur(10px);
   max-width: 850px;
   margin: 0 auto 60px auto;
   line-height: 1.7;
 }
 
-
+/* ============================
+   SERVICES GRID
+============================ */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -35,7 +42,7 @@
 }
 
 .service-card {
-  background: #ebd5d596; 
+  background: #ebd5d596;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(130, 130, 130, 0.571);
   overflow: hidden;
@@ -45,14 +52,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .service-card:hover {
-  transform: none;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .service-image-frame {
-  background: #e0e0e03d; 
+  background: #434343c7;
   width: 100%;
   height: 280px;
   display: flex;
@@ -63,11 +68,10 @@
 .service-image-frame img {
   width: 95%;
   height: 250px;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 10px;
   opacity: 0.97;
 }
-
 
 .service-content {
   padding: 25px 30px 35px 30px;
@@ -75,19 +79,182 @@
 }
 
 .service-content h2 {
-  color: #fcffe7dc; 
+  color: #4a4a4a; /* softer grey heading */
   font-size: 1.4rem;
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .service-content p {
   font-size: 1rem;
-  color: #fcffe7dc;
+  color: #000; /* pure black for text */
   line-height: 1.6;
 }
 
+/* ============================
+   HOW WE WORK SECTION
+============================ */
+.process-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
 
+.process-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #5a5a5a; /* subtle grey */
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  background: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step h3 {
+  color: #5a5a5a; /* grey heading */
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: #000; /* pure black text */
+}
+
+/* ============================
+   STORIES OF HOPE
+============================ */
+.stories-section {
+  background: linear-gradient(135deg, #fdfdfd, #f3f3f3);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.stories-section h2 {
+  color: #5a5a5a; /* lighter heading */
+  margin-bottom: 40px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  font-style: italic;
+  color: #000;
+}
+
+.story h4 {
+  margin-top: 15px;
+  color: #5a5a5a;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ============================
+   CORE VALUES
+============================ */
+.values-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.values-section h2 {
+  color: #5a5a5a;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.values-grid div {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.values-grid h3 {
+  color: #5a5a5a;
+  margin-bottom: 10px;
+}
+
+.values-grid p {
+  color: #000;
+}
+
+/* ============================
+   VOLUNTEER SECTION
+============================ */
+.volunteer-section {
+  text-align: center;
+  background: linear-gradient(135deg, #007b5e, #00a67e);
+  color: #fff;
+  padding: 90px 20px;
+}
+
+.volunteer-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* softer white */
+}
+
+.volunteer-section p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.btn-volunteer {
+  background: #fff;
+  color: #007b5e;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-volunteer:hover {
+  background: #f1f1f1;
+  transform: translateY(-3px);
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: 1fr 1fr;

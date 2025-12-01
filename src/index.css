@@ -1,13 +1,34 @@
+/* In your index.css or App.css */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+/* Global Styles */
 body {
+  font-family: 'Merriweather', serif;  /* Applying Merriweather font */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: var(--dark, #333);  /* Use default dark color or customize with CSS variables */
 }
 
+/* Apply Merriweather to all elements globally */
+h1, h2, h3, p, a {
+  font-family: 'Merriweather', serif;  /* Ensures that headings and paragraphs use Merriweather */
+  margin: 0;
+  padding: 0;
+}
+
+/* For code blocks, let's keep the monospaced font for better readability */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'source-code-pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Additional Styling for Links */
+a {
+  color: inherit; /* Ensures links inherit the color of the text */
+  text-decoration: none; /* Removes underline by default */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #36b96a;  /* Hover color for links */
 }

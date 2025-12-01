@@ -29,6 +29,11 @@ import events4 from "../assets/events4.JPG";
 import events5 from "../assets/events5.JPG";
 import events6 from "../assets/events6.jpg";
 
+// Videos (example imports, replace with your own video paths)
+import video1 from "../assets/video1.mp4";
+import video2 from "../assets/video2.mp4";
+import video3 from "../assets/video3.mp4";
+
 function Media() {
   const [selectedCategory, setSelectedCategory] = useState("food");
 
@@ -36,13 +41,16 @@ function Media() {
   const rationImages = [ration2, ration3, ration4, ration5, ration6, ration7];
   const eventImages = [events, events1, events2, events3, events4, events5, events6];
 
+  // Add your videos here
+  const videos = [video1, video2, video3];
+
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 9000, // slower for smooth motion
+    speed: 9000,
     autoplaySpeed: 0,
     cssEase: "linear",
     arrows: false,
@@ -53,11 +61,30 @@ function Media() {
     ],
   };
 
-  const renderSlider = (images) => (
+  const renderSliderImages = (images) => (
     <Slider {...settings}>
       {[...images, ...images].map((img, index) => (
         <div key={index} className="media-card">
           <img src={img} alt={`media ${index + 1}`} />
+        </div>
+      ))}
+    </Slider>
+  );
+
+  const renderSliderVideos = (videos) => (
+    <Slider {...settings}>
+      {[...videos, ...videos].map((vid, index) => (
+        <div key={index} className="video-card">
+          <video
+            src={vid}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            controls={false} // remove if you want controls visible
+            className="video-short"
+          />
         </div>
       ))}
     </Slider>
@@ -87,14 +114,20 @@ function Media() {
         >
           Events
         </button>
+        <button
+          className={selectedCategory === "videos" ? "active" : ""}
+          onClick={() => setSelectedCategory("videos")}
+        >
+          Videos
+        </button>
       </div>
 
-      {/* Slider */}
       <div className="media-slider-frame">
         <div className="media-slider-container">
-          {selectedCategory === "food" && renderSlider(foodImages)}
-          {selectedCategory === "ration" && renderSlider(rationImages)}
-          {selectedCategory === "events" && renderSlider(eventImages)}
+          {selectedCategory === "food" && renderSliderImages(foodImages)}
+          {selectedCategory === "ration" && renderSliderImages(rationImages)}
+          {selectedCategory === "events" && renderSliderImages(eventImages)}
+          {selectedCategory === "videos" && renderSliderVideos(videos)}
         </div>
       </div>
     </div>
