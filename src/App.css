@@ -57,7 +57,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2rem; 
 }
 
 .nav-links a {
@@ -83,6 +83,34 @@ body {
 .nav-links a.active::after {
   width: 100%;
 }
+.footer-newsletter{
+  transform: translateX(450px);
+}
+.footer-newsletter input {
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  margin-right: 0.5rem;
+  width: 65%;
+}
+
+.footer-newsletter button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #4f584b, #2e342b);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background: linear-gradient(135deg, #fff, #999);
+  color: #000;
+}
+
 
 
 .donate-btn {
@@ -186,6 +214,10 @@ body {
   line-height: 1.5;
 }
 
+.footer-right{
+  transform: translateY(-110px);
+
+}
 .footer-right h4 {
   margin-bottom: 1rem;
   color: #b2b2b2cc;

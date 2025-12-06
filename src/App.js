@@ -111,6 +111,14 @@ function App() {
               <img src={logo} alt="Joseph Paul Trust" className="footer-logo" />
               <p>© 2025 Joseph Paul Trust | All Rights Reserved</p>
             </div>
+          <div className="footer-newsletter">
+  <h4>Stay Connected</h4>
+  <p>Join our mailing list for updates and impact stories.</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
 
             <div className="footer-right">
               <h4>Follow Us</h4>
