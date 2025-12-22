@@ -136,7 +136,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* STORIES SECTION */}
       <section className="stories-section fade-in">
         <h2>Stories That Inspire</h2>
         <p>Real voices. Real lives. See how faith and compassion transform communities across the world.</p>
@@ -189,7 +188,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA SECTION */}
       <section className="cta-section fade-in">
         <h2>Be the Change Today</h2>
         <p>
@@ -199,7 +197,6 @@ const Home = () => {
         <Link to="/donate" className="cta-btn">Donate Now</Link>
       </section>
 
-      {/* FAQ SECTION */}
       <section className="faq-section fade-in">
         <h2>Frequently Asked Questions</h2>
         <div className="faq-grid">
@@ -226,7 +223,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* MAP SECTION */}
       <section className="map-section fade-in">
         <h2>Our Global Impact</h2>
         <p>See where we've made a difference. Our impact spans across multiple regions, supporting communities in need.</p>
@@ -244,7 +240,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer fade-in">
         <div className="footer-container">
           <div className="social-links">
