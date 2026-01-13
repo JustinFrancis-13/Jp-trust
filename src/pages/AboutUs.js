@@ -11,6 +11,9 @@ import volunteerImage from "../assets/volunteer.jpg";
 import Timeline from "./Timeline";
 
 function AboutUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="aboutus-page">
       {/* Intro */}

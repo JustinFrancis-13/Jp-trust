@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ScrollToTop from "./components/ScrollToTop";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,6 +24,25 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import logo from "./assets/logo.jpg";
+
+function App() {
+  return (
+        <BrowserRouter>
+      
+   
+      <ScrollToTop />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/services" element={<Services />} />
+        <Route path= "/donate" element={<Donate />} />
+      </Routes>
+
+    </BrowserRouter>
+  );
+}
 
 function Header() {
   const location = useLocation();
